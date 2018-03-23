@@ -1,0 +1,2 @@
+# Description
+iOSでVoiceroidServerに接続し音声を取得することのできるテスト用クライアント
