@@ -14,10 +14,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
     static var sharedInstance: ViewController? = nil
     //入力フィールド
     @IBOutlet weak var wordField: UITextField!
-    //決定ボタン
-    @IBOutlet weak var button: UIButton!
-    //ラベル
-    @IBOutlet weak var label: UILabel!
+    //音声入力ボタン
+    @IBOutlet weak var audioInputButton: UIButton!
+    //テキスト入力ボタン
+    @IBOutlet weak var textInputButton: UIButton!
+    //ゆかりさんのセリフ
+    @IBOutlet weak var yukariSerifuLabel: UILabel!
+    //自分のセリフ
+    @IBOutlet weak var mySerifuLabel: UILabel!
+    //録音状況のラベル
+    @IBOutlet weak var audioStatusLabel: UILabel!
+    
+    
     
     var voiceData: Data?
     //音声再生オブジェクト
@@ -36,6 +44,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
         super.viewDidLoad()
         ViewController.sharedInstance = self
         speechRecognizer.delegate = self
+        audioInputButton.isEnabled = true
+        textInputButton.isEnabled = false
+        wordField.isEnabled = false
+        
+        mySerifuLabel.text = ""
+        yukariSerifuLabel.text = ""
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -44,26 +58,48 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func sendButton(_ sender: Any) {
+    @IBAction func pushAudioInputButton(_ sender: UIButton) {
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
-            button.isEnabled = false
-            button.setTitle("停止中", for: .disabled)
+            audioInputButton.isEnabled = false
+            self.audioStatusLabel.text = "停止中"
         } else {
             try! startRecording()
-            button.setTitle("音声認識を中止", for: [])
+            self.audioStatusLabel.text = "音声認識停止"
         }
+    }
+    @IBAction func pushTextInputButton(_ sender: UIButton) {
+        if let text: String = wordField.text {
+            Docomo.sharedInstance.getResponse(text: text)
+            mySerifuLabel.text = text
+        }else{
+            mySerifuLabel.text = "テキストを入力してください！"
+        }
+        
         
     }
     
-    @IBAction func pushExtButton(_ sender: Any) {
-        speakProcess("ぷろせす")
+    @IBOutlet weak var inputType: UISegmentedControl!
+    @IBAction func inputTypeChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            //Text入力を選択
+            audioInputButton.isEnabled = false
+            textInputButton.isEnabled = true
+            wordField.isEnabled = true
+        }else{
+            //音声入力を選択
+            audioInputButton.isEnabled = true
+            textInputButton.isEnabled = false
+            wordField.isEnabled = false
+        }
     }
+    
+    
+    
     func speakProcess(_ text: String) {
-        let word = text
-        let request: Request = Request()
         
+        let request: Request = Request()
         //let url: URL = URL(string: "https://voiceroid.mosin.jp/")!
         let url: URL = URL(string: "http://mosin.jp:7180")!
         let params: [String:Any] = [
@@ -73,7 +109,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
             "PITCH": 1,
             "SPEED": 1,
             "VOLUME": 1,
-            "TALKTEXT": word
+            "TALKTEXT": text
         ]
         
         do {
@@ -82,10 +118,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
                     self.voiceData = data
                     self.playVoice()
                 }
-                
             })
         } catch {
             print("network error")
+        }
+        
+        OperationQueue.main.addOperation {
+            self.yukariSerifuLabel.text = text
         }
     }
     
@@ -122,11 +161,11 @@ extension ViewController: SFSpeechRecognizerDelegate {
     // 音声認識の可否が変更したときに呼ばれるdelegate
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
-            button.isEnabled = true
-            button.setTitle("音声認識スタート", for: [])
+            audioInputButton.isEnabled = true
+            audioStatusLabel.text = "音声認識スタート"
         } else {
-            button.isEnabled = false
-            button.setTitle("音声認識ストップ", for: .disabled)
+            audioInputButton.isEnabled = false
+            audioStatusLabel.text = "音声認識ストップ"
         }
     }
     
@@ -145,19 +184,19 @@ extension ViewController: SFSpeechRecognizerDelegate {
                 
                 switch authStatus {
                 case .authorized:
-                    self.button.isEnabled = true
+                    self.audioInputButton.isEnabled = true
                     
                 case .denied:
-                    self.button.isEnabled = false
-                    self.button.setTitle("音声認識へのアクセスが拒否されています。", for: .disabled)
+                    self.audioInputButton.isEnabled = false
+                    self.audioStatusLabel.text = "音声認識へのアクセスが拒否されています。"
                     
                 case .restricted:
-                    self.button.isEnabled = false
-                    self.button.setTitle("この端末で音声認識はできません。", for: .disabled)
+                    self.audioInputButton.isEnabled = false
+                    self.audioStatusLabel.text = "この端末で音声認識はできません。"
                     
                 case .notDetermined:
-                    self.button.isEnabled = false
-                    self.button.setTitle("音声認識はまだ許可されていません。", for: .disabled)
+                    self.audioInputButton.isEnabled = false
+                    self.audioStatusLabel.text = "音声認識はまだ許可されていません。"
                 }
             }
         }
@@ -179,7 +218,7 @@ extension ViewController: SFSpeechRecognizerDelegate {
         
         // 録音が完了する前のリクエストを作るかどうかのフラグ。
         // trueだと現在-1回目のリクエスト結果が返ってくる模様。falseだとボタンをオフにしたときに音声認識の結果が返ってくる設定。
-        recognitionRequest.shouldReportPartialResults = false
+        recognitionRequest.shouldReportPartialResults = true
         
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { [weak self] result, error in
             guard let `self` = self else { return }
@@ -188,10 +227,12 @@ extension ViewController: SFSpeechRecognizerDelegate {
             
             if let result = result {
                 let inputText = result.bestTranscription.formattedString
-                Docomo.sharedInstance.getResponse(text: inputText)
                 //self.speakProcess(inputText)
-                self.label.text = inputText
+                self.mySerifuLabel.text = inputText
                 isFinal = result.isFinal
+                if(isFinal){
+                    Docomo.sharedInstance.getResponse(text: inputText)
+                }
             }
             
             // エラーがある、もしくは最後の認識結果だった場合の処理
@@ -202,8 +243,8 @@ extension ViewController: SFSpeechRecognizerDelegate {
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
                 
-                self.button.isEnabled = true
-                self.button.setTitle("音声認識スタート", for: [])
+                self.audioInputButton.isEnabled = true
+                self.audioStatusLabel.text = "音声認識スタート"
             }
         }
         
@@ -229,7 +270,7 @@ extension ViewController: SFSpeechRecognizerDelegate {
         
         try audioEngine.start()
         
-        label.text = "どうぞ喋ってください。"
+        audioStatusLabel.text = "どうぞ喋ってください。"
     }
 
 }

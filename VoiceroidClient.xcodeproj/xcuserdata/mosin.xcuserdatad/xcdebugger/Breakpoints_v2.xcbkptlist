@@ -35,53 +35,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VoiceroidClient/API/Docomo.swift"
-            timestampString = "543550810.002748"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "getResponse(text:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VoiceroidClient.Docomo.getResponse(text: Swift.String) -&gt; ()"
-                  moduleName = "VoiceroidClient"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mosin/Git/VoiceroidClient/VoiceroidClient/API/Docomo.swift"
-                  timestampString = "543550811.757374"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "2032">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in VoiceroidClient.Docomo.getResponse(text: Swift.String) -&gt; ()"
-                  moduleName = "VoiceroidClient"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mosin/Git/VoiceroidClient/VoiceroidClient/API/Docomo.swift"
-                  timestampString = "543550811.763956"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "528">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
