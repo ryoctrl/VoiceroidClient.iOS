@@ -11,7 +11,7 @@ import AVFoundation
 import Speech
 
 class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelegate {
-    
+    static var sharedInstance: ViewController? = nil
     //入力フィールド
     @IBOutlet weak var wordField: UITextField!
     //決定ボタン
@@ -34,7 +34,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ViewController.sharedInstance = self
         speechRecognizer.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -188,7 +188,8 @@ extension ViewController: SFSpeechRecognizerDelegate {
             
             if let result = result {
                 let inputText = result.bestTranscription.formattedString
-                self.speakProcess(inputText)
+                Docomo.sharedInstance.getResponse(text: inputText)
+                //self.speakProcess(inputText)
                 self.label.text = inputText
                 isFinal = result.isFinal
             }
