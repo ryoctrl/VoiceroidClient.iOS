@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class Consts {
+    static string api_key = ""
+}

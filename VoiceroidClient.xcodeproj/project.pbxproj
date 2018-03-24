@@ -16,6 +16,8 @@
 		515A95DD2065A376007C0DF6 /* VoiceroidClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95DC2065A376007C0DF6 /* VoiceroidClientUITests.swift */; };
 		515A95EB2065A59C007C0DF6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95EA2065A59C007C0DF6 /* Request.swift */; };
 		515A95EE2065A8B5007C0DF6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515A95ED2065A8B5007C0DF6 /* AVFoundation.framework */; };
+		515A95FC2065E503007C0DF6 /* Docomo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95FB2065E503007C0DF6 /* Docomo.swift */; };
+		515A96002065E5B2007C0DF6 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95FF2065E5B2007C0DF6 /* Consts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		515A95DE2065A376007C0DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515A95EA2065A59C007C0DF6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		515A95ED2065A8B5007C0DF6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		515A95FB2065E503007C0DF6 /* Docomo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Docomo.swift; sourceTree = "<group>"; };
+		515A95FF2065E5B2007C0DF6 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		515A95BB2065A375007C0DF6 /* VoiceroidClient */ = {
 			isa = PBXGroup;
 			children = (
+				515A95FA2065E4EB007C0DF6 /* API */,
 				515A95BC2065A375007C0DF6 /* AppDelegate.swift */,
 				515A95BE2065A375007C0DF6 /* ViewController.swift */,
 				515A95C02065A375007C0DF6 /* Main.storyboard */,
@@ -110,6 +115,7 @@
 				515A95C52065A375007C0DF6 /* LaunchScreen.storyboard */,
 				515A95C82065A375007C0DF6 /* Info.plist */,
 				515A95EA2065A59C007C0DF6 /* Request.swift */,
+				515A95FF2065E5B2007C0DF6 /* Consts.swift */,
 			);
 			path = VoiceroidClient;
 			sourceTree = "<group>";
@@ -138,6 +144,14 @@
 				515A95ED2065A8B5007C0DF6 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		515A95FA2065E4EB007C0DF6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				515A95FB2065E503007C0DF6 /* Docomo.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515A95FC2065E503007C0DF6 /* Docomo.swift in Sources */,
+				515A96002065E5B2007C0DF6 /* Consts.swift in Sources */,
 				515A95BF2065A375007C0DF6 /* ViewController.swift in Sources */,
 				515A95EB2065A59C007C0DF6 /* Request.swift in Sources */,
 				515A95BD2065A375007C0DF6 /* AppDelegate.swift in Sources */,
