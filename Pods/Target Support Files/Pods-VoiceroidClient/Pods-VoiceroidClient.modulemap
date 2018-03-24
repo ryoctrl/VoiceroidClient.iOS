@@ -1,0 +1,6 @@
+framework module Pods_VoiceroidClient {
+  umbrella header "Pods-VoiceroidClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_VoiceroidClientUITests {
+  umbrella header "Pods-VoiceroidClientUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

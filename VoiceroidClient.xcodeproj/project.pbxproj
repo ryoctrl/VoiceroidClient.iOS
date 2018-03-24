@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1AEAE8BC35CF6C5E195797 /* Pods_VoiceroidClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CF51BE476DF48ECAC9A951 /* Pods_VoiceroidClientUITests.framework */; };
 		515A95BD2065A375007C0DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95BC2065A375007C0DF6 /* AppDelegate.swift */; };
 		515A95BF2065A375007C0DF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95BE2065A375007C0DF6 /* ViewController.swift */; };
 		515A95C22065A375007C0DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515A95C02065A375007C0DF6 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 		515A95EE2065A8B5007C0DF6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515A95ED2065A8B5007C0DF6 /* AVFoundation.framework */; };
 		515A95FC2065E503007C0DF6 /* Docomo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95FB2065E503007C0DF6 /* Docomo.swift */; };
 		515A96002065E5B2007C0DF6 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A95FF2065E5B2007C0DF6 /* Consts.swift */; };
+		5DAB97143CF808B709BB84B5 /* Pods_VoiceroidClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD59F567FAE88D19A99C317A /* Pods_VoiceroidClient.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DD4BA821E7D4A81D27E910E3 /* Pods_VoiceroidClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E2DD30D0D3133494E5CB82 /* Pods_VoiceroidClientTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		328743F8D34F45881ACD45C4 /* Pods-VoiceroidClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceroidClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceroidClient/Pods-VoiceroidClient.release.xcconfig"; sourceTree = "<group>"; };
+		41E2DD30D0D3133494E5CB82 /* Pods_VoiceroidClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceroidClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515A95B92065A375007C0DF6 /* VoiceroidClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceroidClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515A95BC2065A375007C0DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515A95BE2065A375007C0DF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +60,13 @@
 		515A95ED2065A8B5007C0DF6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		515A95FB2065E503007C0DF6 /* Docomo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Docomo.swift; sourceTree = "<group>"; };
 		515A95FF2065E5B2007C0DF6 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		5E67FD0BF78E27224A5445FD /* Pods-VoiceroidClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceroidClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceroidClientUITests/Pods-VoiceroidClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		703B145F449133B5CDECF2DB /* Pods-VoiceroidClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceroidClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceroidClientTests/Pods-VoiceroidClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96CF51BE476DF48ECAC9A951 /* Pods_VoiceroidClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceroidClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA9D20FD28853493C4D154A /* Pods-VoiceroidClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceroidClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceroidClient/Pods-VoiceroidClient.debug.xcconfig"; sourceTree = "<group>"; };
+		BBE7A3A0D6498B6888A0A30C /* Pods-VoiceroidClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceroidClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceroidClientTests/Pods-VoiceroidClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3492831D2866711CFB46199 /* Pods-VoiceroidClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceroidClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceroidClientUITests/Pods-VoiceroidClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD59F567FAE88D19A99C317A /* Pods_VoiceroidClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceroidClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				515A95EE2065A8B5007C0DF6 /* AVFoundation.framework in Frameworks */,
+				5DAB97143CF808B709BB84B5 /* Pods_VoiceroidClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4BA821E7D4A81D27E910E3 /* Pods_VoiceroidClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +91,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1AEAE8BC35CF6C5E195797 /* Pods_VoiceroidClientUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A63AED370AA2749FB29E49A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9D20FD28853493C4D154A /* Pods-VoiceroidClient.debug.xcconfig */,
+				328743F8D34F45881ACD45C4 /* Pods-VoiceroidClient.release.xcconfig */,
+				703B145F449133B5CDECF2DB /* Pods-VoiceroidClientTests.debug.xcconfig */,
+				BBE7A3A0D6498B6888A0A30C /* Pods-VoiceroidClientTests.release.xcconfig */,
+				5E67FD0BF78E27224A5445FD /* Pods-VoiceroidClientUITests.debug.xcconfig */,
+				C3492831D2866711CFB46199 /* Pods-VoiceroidClientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		515A95B02065A375007C0DF6 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +119,7 @@
 				515A95DB2065A376007C0DF6 /* VoiceroidClientUITests */,
 				515A95BA2065A375007C0DF6 /* Products */,
 				515A95EC2065A8B4007C0DF6 /* Frameworks */,
+				0A63AED370AA2749FB29E49A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				515A95ED2065A8B5007C0DF6 /* AVFoundation.framework */,
+				FD59F567FAE88D19A99C317A /* Pods_VoiceroidClient.framework */,
+				41E2DD30D0D3133494E5CB82 /* Pods_VoiceroidClientTests.framework */,
+				96CF51BE476DF48ECAC9A951 /* Pods_VoiceroidClientUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 515A95E12065A376007C0DF6 /* Build configuration list for PBXNativeTarget "VoiceroidClient" */;
 			buildPhases = (
+				1D958BF886D4F102D9E95F49 /* [CP] Check Pods Manifest.lock */,
 				515A95B52065A375007C0DF6 /* Sources */,
 				515A95B62065A375007C0DF6 /* Frameworks */,
 				515A95B72065A375007C0DF6 /* Resources */,
+				BA76A4E2F375B411F1991624 /* [CP] Embed Pods Frameworks */,
+				FFCC2B3A3D3ACF24ED03C18C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 515A95E42065A376007C0DF6 /* Build configuration list for PBXNativeTarget "VoiceroidClientTests" */;
 			buildPhases = (
+				541BCAB69A4ED2E233FFD7B2 /* [CP] Check Pods Manifest.lock */,
 				515A95C92065A376007C0DF6 /* Sources */,
 				515A95CA2065A376007C0DF6 /* Frameworks */,
 				515A95CB2065A376007C0DF6 /* Resources */,
+				E18B17FDC98410F19952E430 /* [CP] Embed Pods Frameworks */,
+				EB9568FC569E4FB22583AA92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 515A95E72065A376007C0DF6 /* Build configuration list for PBXNativeTarget "VoiceroidClientUITests" */;
 			buildPhases = (
+				3CBF25F24ECD2202D4E714E1 /* [CP] Check Pods Manifest.lock */,
 				515A95D42065A376007C0DF6 /* Sources */,
 				515A95D52065A376007C0DF6 /* Frameworks */,
 				515A95D62065A376007C0DF6 /* Resources */,
+				7964F9EC245983761BECEC54 /* [CP] Embed Pods Frameworks */,
+				017452F1E5AD8A28DE0CB72C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +323,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		017452F1E5AD8A28DE0CB72C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClientUITests/Pods-VoiceroidClientUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D958BF886D4F102D9E95F49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoiceroidClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CBF25F24ECD2202D4E714E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoiceroidClientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		541BCAB69A4ED2E233FFD7B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoiceroidClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7964F9EC245983761BECEC54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClientUITests/Pods-VoiceroidClientUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA76A4E2F375B411F1991624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClient/Pods-VoiceroidClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClient/Pods-VoiceroidClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E18B17FDC98410F19952E430 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClientTests/Pods-VoiceroidClientTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9568FC569E4FB22583AA92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClientTests/Pods-VoiceroidClientTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFCC2B3A3D3ACF24ED03C18C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceroidClient/Pods-VoiceroidClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		515A95B52065A375007C0DF6 /* Sources */ = {
@@ -456,6 +647,7 @@
 		};
 		515A95E22065A376007C0DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA9D20FD28853493C4D154A /* Pods-VoiceroidClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +663,7 @@
 		};
 		515A95E32065A376007C0DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 328743F8D34F45881ACD45C4 /* Pods-VoiceroidClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +679,7 @@
 		};
 		515A95E52065A376007C0DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 703B145F449133B5CDECF2DB /* Pods-VoiceroidClientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +697,7 @@
 		};
 		515A95E62065A376007C0DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBE7A3A0D6498B6888A0A30C /* Pods-VoiceroidClientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +715,7 @@
 		};
 		515A95E82065A376007C0DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E67FD0BF78E27224A5445FD /* Pods-VoiceroidClientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +732,7 @@
 		};
 		515A95E92065A376007C0DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3492831D2866711CFB46199 /* Pods-VoiceroidClientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
