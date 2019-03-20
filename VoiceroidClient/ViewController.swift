@@ -25,6 +25,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
     //録音状況のラベル
     @IBOutlet weak var audioStatusLabel: UILabel!
     
+    var voiceroid_URL: String = "http://mosin.jp:7180"
+    
     
     
     var voiceData: Data?
@@ -44,9 +46,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
         super.viewDidLoad()
         ViewController.sharedInstance = self
         speechRecognizer.delegate = self
-        audioInputButton.isEnabled = true
-        textInputButton.isEnabled = false
-        wordField.isEnabled = false
+        textInputButton.isHidden = true
+        wordField.isHidden = true
         
         mySerifuLabel.text = ""
         yukariSerifuLabel.text = ""
@@ -57,6 +58,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func changeAccessPoint(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        if(index == 0){
+            voiceroid_URL = "http://192.168.0.5:7180"
+        }else if(index  == 1) {
+            voiceroid_URL = "http://mosin.jp:7180"
+        }else if(index == 2){
+            voiceroid_URL = "https://voiceroid.mosin.jp/"
+        }
+    }
+    
+    
     
     @IBAction func pushAudioInputButton(_ sender: UIButton) {
         if audioEngine.isRunning {
@@ -84,24 +98,23 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
     @IBAction func inputTypeChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             //Text入力を選択
-            audioInputButton.isEnabled = false
-            textInputButton.isEnabled = true
-            wordField.isEnabled = true
+            audioInputButton.isHidden = true
+            textInputButton.isHidden = false
+            wordField.isHidden = false
         }else{
             //音声入力を選択
-            audioInputButton.isEnabled = true
-            textInputButton.isEnabled = false
-            wordField.isEnabled = false
+            audioInputButton.isHidden = false
+            textInputButton.isHidden = true
+            wordField.isHidden = true
         }
     }
     
     
     
     func speakProcess(_ text: String) {
-        
         let request: Request = Request()
         //let url: URL = URL(string: "https://voiceroid.mosin.jp/")!
-        let url: URL = URL(string: "http://mosin.jp:7180")!
+        let url: URL = URL(string: voiceroid_URL)!
         let params: [String:Any] = [
             "CV": "YUKARI_EX",
             "DO": "SAVE",
@@ -140,7 +153,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITextFieldDelega
         do {
             audioPlayerInstance = try AVAudioPlayer(data: voiceData!)
             audioPlayerInstance?.delegate = self
-            print(AVAudioSession.sharedInstance().outputVolume)
             audioPlayerInstance?.play()
         } catch {
             print("audio error")

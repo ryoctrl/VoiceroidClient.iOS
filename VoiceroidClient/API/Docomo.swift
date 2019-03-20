@@ -14,15 +14,12 @@ class Docomo {
 
     let api_key = Consts.api_key
     var latestContext = ""
+    var latestMode: Mode = .NORMAL
     
     enum Mode: String {
         case SIRITORI = "srtr"
         case NORMAL = "dialog"
     }
-    
-    //let mode: Mode = .SIRITORI
-    let mode: Mode = .NORMAL
-    
     
     func getResponse(text: String) {
         let request: Request = Request()
@@ -42,7 +39,7 @@ class Docomo {
         data.setValue("20", forKey: "age")
         data.setValue("山羊座", forKey: "constellations")
         data.setValue("大阪", forKey: "place")
-        data.setValue(mode.rawValue, forKey: "mode")
+        data.setValue(latestMode.rawValue, forKey: "mode")
         if latestContext != "" {
             data.setValue(latestContext, forKey: "context")
         }
@@ -62,7 +59,7 @@ class Docomo {
     func responseProcess(_ data: Data?) {
         do {
             let response: JSON = try JSON(data: data!)
-            print(response)
+            let statusCode = response["error"]["code"].intValue
             let errorCode = response["error"]["code"] == "400" ? 400 : 200
             
             var text = ""
@@ -72,6 +69,7 @@ class Docomo {
             }else{
                 latestContext = response["context"].string!
                 text = response["utt"].string!
+                latestMode = Mode.init(rawValue: response["mode"].stringValue)!
             }
             
             ViewController.sharedInstance!.speakProcess(text)
